@@ -1,0 +1,150 @@
+object MainForm: TMainForm
+  Left = 525
+  Height = 222
+  Top = 252
+  Width = 288
+  BorderStyle = bsDialog
+  Caption = 'baCounter'
+  ClientHeight = 222
+  ClientWidth = 288
+  OnCreate = Label1DblClick
+  Position = poScreenCenter
+  LCLVersion = '1.2.2.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 138
+    Top = 0
+    Width = 288
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 138
+    ClientWidth = 288
+    TabOrder = 0
+    object Arrow1: TArrow
+      Cursor = crHandPoint
+      Left = 8
+      Height = 16
+      Top = 8
+      Width = 53
+      ArrowType = atUp
+      Constraints.MinHeight = 8
+      Constraints.MinWidth = 8
+      OnClick = Arrow1Click
+    end
+    object Arrow2: TArrow
+      Cursor = crHandPoint
+      Left = 8
+      Height = 15
+      Top = 112
+      Width = 53
+      ArrowType = atDown
+      Constraints.MinHeight = 8
+      Constraints.MinWidth = 8
+      OnClick = Arrow2Click
+    end
+    object Label1: TLabel
+      Cursor = crHandPoint
+      Left = 64
+      Height = 120
+      Top = 8
+      Width = 220
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = '0000'
+      Font.Color = clBlack
+      Font.Height = -76
+      Font.Name = 'Sans'
+      Layout = tlCenter
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+      OnClick = Label1Click
+      OnDblClick = Label1DblClick
+    end
+    object Label3: TLabel
+      Left = 242
+      Height = 31
+      Top = 106
+      Width = 34
+      Anchors = [akTop, akRight]
+      Caption = '00'
+      Font.Height = -27
+      Font.Name = 'Sans'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Button1: TButton
+    Left = 206
+    Height = 40
+    Top = 144
+    Width = 75
+    Caption = 'Close'
+    Color = clRed
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 6
+    Height = 40
+    Top = 144
+    Width = 120
+    Caption = 'Start'
+    Color = clGreen
+    OnClick = Label1Click
+    TabOrder = 2
+  end
+  object Arrow3: TArrow
+    Cursor = crHandPoint
+    Left = 8
+    Height = 32
+    Top = 32
+    Width = 53
+    ArrowType = atUp
+    Constraints.MinHeight = 8
+    Constraints.MinWidth = 8
+    OnClick = Arrow3Click
+  end
+  object Arrow4: TArrow
+    Cursor = crHandPoint
+    Left = 8
+    Height = 31
+    Top = 72
+    Width = 53
+    ArrowType = atDown
+    Constraints.MinHeight = 8
+    Constraints.MinWidth = 8
+    OnClick = Arrow4Click
+  end
+  object Button3: TButton
+    Left = 128
+    Height = 40
+    Top = 144
+    Width = 75
+    Caption = 'Reset'
+    Color = clAqua
+    OnClick = Label1DblClick
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Cursor = crHandPoint
+    Left = 6
+    Height = 27
+    Top = 189
+    Width = 276
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Caption = 'Copyright preprosto.com, 2012'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 72
+    top = 80
+  end
+end

@@ -25,6 +25,7 @@ type
     Label3: TLabel;
     Panel1: TPanel;
     Timer1: TTimer;
+    TrayIcon1: TTrayIcon;
     procedure Arrow1Click(Sender: TObject);
     procedure Arrow2Click(Sender: TObject);
     procedure Arrow3Click(Sender: TObject);
@@ -33,6 +34,7 @@ type
     procedure Label1Click(Sender: TObject);
     procedure Label1DblClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure TrayIcon1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -156,6 +158,11 @@ begin
       label3.caption:=LeadingZero(Sek,2);
     end;
   end;
+end;
+
+procedure TMainForm.TrayIcon1Click(Sender: TObject);
+begin
+  if MainForm.visible then MainForm.visible:=false else MainForm.visible:=true;
 end;
 
 

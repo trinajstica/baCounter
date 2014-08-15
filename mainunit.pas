@@ -72,7 +72,7 @@ begin
   narjeno:=false;
   Timer1.Enabled:=False;done:=true;
   sek:=60;min:=0;Label1.caption:=LeadingZero(min,4);
-  label3.caption:=LeadingZero(sek,2);
+  label3.caption:=LeadingZero(sek-1,2);
   button2.caption:='Start';
 end;
 
@@ -80,7 +80,7 @@ procedure TMainForm.Arrow1Click(Sender: TObject);
 begin
   done:=true;narjeno:=false;
   Label1.Font.Color:=clDefault;
-  Timer1.Enabled:=False;if min<9999 then
+  if min<9999 then
   begin
     min:=min+1;if min>9999 then min:=9999;
     Label1.caption:=LeadingZero(min,4);
@@ -91,7 +91,7 @@ procedure TMainForm.Arrow2Click(Sender: TObject);
 begin
   done:=true;narjeno:=false;
   Label1.Font.Color:=clDefault;
-  Timer1.Enabled:=False;if min>0 then
+  if min>0 then
   begin
     min:=min-1;if min<0 then min:=0;
     Label1.caption:=LeadingZero(min,4);
@@ -102,7 +102,7 @@ procedure TMainForm.Arrow3Click(Sender: TObject);
 begin
   done:=true;narjeno:=false;
   Label1.Font.Color:=clDefault;
-  Timer1.Enabled:=False;if min<9999 then
+  if min<9999 then
   begin
     min:=min+15;if min>9999 then min:=9999;
     Label1.caption:=LeadingZero(min,4);
@@ -113,7 +113,7 @@ procedure TMainForm.Arrow4Click(Sender: TObject);
 begin
   done:=true;narjeno:=false;
   Label1.Font.Color:=clDefault;
-  Timer1.Enabled:=False;if min>0 then
+  if min>0 then
   begin
     min:=min-15;if min<0 then min:=0;
     Label1.caption:=LeadingZero(min,4);
@@ -132,7 +132,7 @@ begin
   begin
     dec(sek);if sek<1 then
     begin
-      sek:=60;dec(min);
+      sek:=59;dec(min);
       label3.caption:=LeadingZero(Sek,2);
       if min>0 then
       begin

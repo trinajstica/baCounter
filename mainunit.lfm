@@ -136,7 +136,7 @@ object MainForm: TMainForm
     Alignment = taCenter
     Anchors = [akTop, akLeft, akRight]
     AutoSize = False
-    Caption = 'Copyright preprosto.com, 2014'
+    Caption = 'Copyleft preprosto.com, 2014'
     Font.Style = [fsUnderline]
     ParentColor = False
     ParentFont = False

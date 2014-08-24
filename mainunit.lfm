@@ -24,28 +24,39 @@ object MainForm: TMainForm
       Cursor = crHandPoint
       Left = 8
       Height = 24
+      Hint = '+1 minute'
       Top = 8
       Width = 53
+      ArrowColor = 13742225
       ArrowType = atUp
       Constraints.MinHeight = 8
       Constraints.MinWidth = 8
       OnClick = Arrow1Click
+      ParentShowHint = False
+      ShadowType = stNone
+      ShowHint = True
     end
     object Arrow2: TArrow
       Cursor = crHandPoint
       Left = 8
       Height = 24
+      Hint = '-1 minute'
       Top = 112
       Width = 53
+      ArrowColor = clGray
       ArrowType = atDown
       Constraints.MinHeight = 8
       Constraints.MinWidth = 8
       OnClick = Arrow2Click
+      ParentShowHint = False
+      ShadowType = stNone
+      ShowHint = True
     end
     object Label1: TLabel
       Cursor = crHandPoint
       Left = 64
       Height = 120
+      Hint = 'Single click: Pause/Start'#10'Double click: Reset'
       Top = 8
       Width = 220
       Alignment = taCenter
@@ -59,11 +70,14 @@ object MainForm: TMainForm
       ParentBidiMode = False
       ParentColor = False
       ParentFont = False
+      ParentShowHint = False
+      ShowAccelChar = False
+      ShowHint = True
       OnClick = Label1Click
       OnDblClick = Label1DblClick
     end
     object Label3: TLabel
-      Left = 242
+      Left = 199
       Height = 31
       Top = 106
       Width = 34
@@ -73,58 +87,91 @@ object MainForm: TMainForm
       Font.Name = 'Sans'
       ParentColor = False
       ParentFont = False
+      ShowAccelChar = False
     end
     object Arrow3: TArrow
       Cursor = crHandPoint
       Left = 8
       Height = 32
+      Hint = '+15 minutes'
       Top = 35
       Width = 53
+      ArrowColor = 13742225
       ArrowType = atUp
       Constraints.MinHeight = 8
       Constraints.MinWidth = 8
       OnClick = Arrow3Click
+      ParentShowHint = False
+      ShadowType = stNone
+      ShowHint = True
     end
     object Arrow4: TArrow
       Cursor = crHandPoint
       Left = 8
       Height = 31
+      Hint = '-15 minutes'
       Top = 76
       Width = 53
+      ArrowColor = clGray
       ArrowType = atDown
       Constraints.MinHeight = 8
       Constraints.MinWidth = 8
       OnClick = Arrow4Click
+      ParentShowHint = False
+      ShadowType = stNone
+      ShowHint = True
+    end
+    object Label4: TLabel
+      Left = 239
+      Height = 21
+      Top = 113
+      Width = 24
+      Caption = 'Sec'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 89
+      Height = 21
+      Top = 11
+      Width = 56
+      Caption = 'Minutes:'
+      ParentColor = False
     end
   end
   object Button1: TButton
     Left = 206
     Height = 40
+    Hint = 'Close'
     Top = 144
     Width = 75
     Caption = 'Close'
-    Color = clRed
     OnClick = Button1Click
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
   end
   object Button2: TButton
     Left = 6
     Height = 40
+    Hint = 'Start'
     Top = 144
     Width = 120
     Caption = 'Start'
-    Color = clGreen
     OnClick = Label1Click
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
   end
   object Button3: TButton
     Left = 128
     Height = 40
+    Hint = 'Reset'
     Top = 144
     Width = 75
     Caption = 'Reset'
-    Color = clAqua
     OnClick = Label1DblClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
   end
   object Label2: TLabel
@@ -4438,7 +4485,7 @@ object MainForm: TMainForm
     Hint = 'baCounter'
     Visible = True
     OnClick = TrayIcon1Click
-    left = 144
-    top = 112
+    left = 168
+    top = 24
   end
 end

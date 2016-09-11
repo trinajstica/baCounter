@@ -38,7 +38,6 @@
       <Unit0>
         <Filename Value="baCounter.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="baCounter"/>
       </Unit0>
       <Unit1>
         <Filename Value="mainunit.pas"/>
@@ -46,12 +45,10 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="mainunit"/>
       </Unit1>
       <Unit2>
         <Filename Value="support.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="support"/>
       </Unit2>
     </Units>
   </ProjectOptions>
@@ -72,12 +69,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

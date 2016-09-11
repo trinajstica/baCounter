@@ -25,9 +25,9 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Memo1: TMemo;
     Panel1: TPanel;
     Timer1: TTimer;
-    TrayIcon1: TTrayIcon;
     procedure Arrow1Click(Sender: TObject);
     procedure Arrow2Click(Sender: TObject);
     procedure Arrow3Click(Sender: TObject);
@@ -49,7 +49,8 @@ type
 var
   MainForm: TMainForm;
 
-implementation uses support, LCLIntf, LCLProc, LazHelpHTML, UTF8Process;
+
+implementation uses support;
 
 {$R *.lfm}
 
@@ -142,12 +143,13 @@ begin
         Label1.caption:=LeadingZero(min,4);
       end else
       begin
+        mainform.Visible:=true;
         timer1.enabled:=false;Label1.Font.Color:=clRed;done:=false;
         Label1.caption:=LeadingZero(min,4);
         button2.Caption:='DONE';
         repeat
           Label1.Font.Color:=Random($7FFFFFFF);
-          sleep(30);
+          sleep(50);
           Color:=Random($7FFFFFFF);
           application.processmessages;
         until done;
